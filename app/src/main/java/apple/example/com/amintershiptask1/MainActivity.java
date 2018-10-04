@@ -41,21 +41,7 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         });
-
-/*        requestAppPermissions(new String[]{
-                        Manifest.permission.READ_CONTACTS,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_CONTACTS},
-                R.string.msg, REQUEST_CODE);*/
     }
-
-/*    @Override
-    public void onPermissionsGranted(int requestCode) {
-
-        List<ContactInformation> personsList = new CallLogContent(MainActivity.this).getCallLogs();
-        setPersonsList(personsList);
-        Toast.makeText(this, "Permission granted!", Toast.LENGTH_LONG).show();
-    }*/
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
