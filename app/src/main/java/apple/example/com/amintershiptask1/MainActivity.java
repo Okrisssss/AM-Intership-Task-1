@@ -57,6 +57,19 @@ public class MainActivity extends AppCompatActivity{
         Toast.makeText(this, "Permission granted!", Toast.LENGTH_LONG).show();
     }*/
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_CODE){
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                List<ContactInformation> personsList = new CallLogContent(this).getCallLogs();
+                setPersonsList(personsList);
+            } else  {
+                Toast.makeText(this, "Please provide all necessary permissions!", Toast.LENGTH_LONG).show();
+            }
+        }
+
+    }
+
     private void setPersonsList(List<ContactInformation> personsList){
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

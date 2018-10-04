@@ -57,15 +57,15 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.Person
         switch(person.getType()){
             case "1": {
                 holder.textType.setText("Incoming");
-                holder.textType.setTextColor(Color.parseColor("#61ff53"));
+                holder.textType.setTextColor(Color.parseColor("#FF85F460"));
             } break;
             case "2": {
                 holder.textType.setText("Outgoing");
-                holder.textType.setTextColor(Color.parseColor("#1b76ff"));
+                holder.textType.setTextColor(Color.parseColor("#FFFFD940"));
             } break;
             case "3": {
                 holder.textType.setText("Missing");
-                holder.textType.setTextColor(Color.parseColor("#ff3932"));
+                holder.textType.setTextColor(Color.parseColor("#FFF74044"));
             } break;
         }
 
