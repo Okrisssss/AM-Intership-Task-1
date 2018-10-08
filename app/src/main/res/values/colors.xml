@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="phoneTypeIncoming">#FF85F460</color>
+    <color name="phoneTypeOutgoing">#FFFFD940</color>
+    <color name="phoneTypeMissing">#FFF74044</color>
 </resources>

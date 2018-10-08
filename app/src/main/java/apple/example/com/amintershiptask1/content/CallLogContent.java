@@ -24,16 +24,15 @@ public class CallLogContent {
 
     public List<ContactInformation> getCallLogs() {
         List<ContactInformation> contacts = new ArrayList<>();
-        int id = 0;
         Uri allCalls = Uri.parse("content://call_log/calls");
         Cursor cursor = context.getContentResolver().query(allCalls, null, null, null, null);
         while (cursor.moveToNext()) {
+            int id = cursor.getInt(cursor.getColumnIndex(CallLog.Calls._ID));
             String name = cursor.getString(cursor.getColumnIndex(CallLog.Calls.CACHED_NAME));
             String duration = cursor.getString(cursor.getColumnIndex(CallLog.Calls.DURATION));
             String type = cursor.getString(cursor.getColumnIndex(CallLog.Calls.TYPE));
             String number = cursor.getString(cursor.getColumnIndex(CallLog.Calls.NUMBER));
             contacts.add(new ContactInformation(id, name, duration, type, number));
-            id++;
         }
         return contacts;
     }

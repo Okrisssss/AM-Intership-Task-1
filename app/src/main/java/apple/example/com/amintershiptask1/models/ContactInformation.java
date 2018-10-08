@@ -9,7 +9,8 @@ public class ContactInformation {
     private String type;
     private String number;
 
-    public ContactInformation(){}
+    public ContactInformation() {
+    }
 
     public ContactInformation(int id, String name, String duration, String type, String number) {
         this.id = id;

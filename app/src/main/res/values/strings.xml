@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">AM Intership Task 1</string>
     <string name="msg">BrPlease enable all permissions</string>
+    <string name="unknownName">Unknown</string>
+    <string name="phoneTypeIncoming">Incoming</string>
+    <string name="phoneTypeOutgoing">Outgoing</string>
+    <string name="phoneTypeMissing">Missing</string>
+
 </resources>
